@@ -146,6 +146,7 @@
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
 \definecolor{awesome-github-blue}{HTML}{58A6FF}
+\definecolor{sujay-custom-color}{HTML}{0868B8}
 \colorlet{awesome}{awesome-red}
 
 % Boolean value to switch section color highlighting
