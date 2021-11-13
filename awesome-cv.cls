@@ -155,7 +155,7 @@
 
 % Awesome section color
 \newcommand*{\sectioncolor}[1]{%
-  \ifbool{acvSectionColorHighlight}{{\color{black}#1}}{#1}
+  \ifbool{acvSectionColorHighlight}{{\color{awesome}#1}}{#1}
 }
 
 %-------------------------------------------------------------------------------
@@ -271,7 +271,7 @@
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
 
 % Defines writer's email (optional)
-% Usage: \email{<email adress>}
+% Usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
 
 % Defines writer's homepage (optional)
