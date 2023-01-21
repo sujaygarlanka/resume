@@ -1,103 +1,214 @@
-%!TEX TS-program = xelatex
-%!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
-%
-% This template has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
-%
-% Original author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
-%
-% Modifications by:
-% Junhao Dong <junhao.dong96@gmail.com>
-%
-% Template license:
-% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-%
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
 
 
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=0cm, right=1.4cm, bottom=0.5cm, footskip=.5cm}
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
 
-% Specify the location of the included fonts
-\fontdir[fonts/]
 
-% Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{sujay-custom-color}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-% Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\urlstyle{same}
 
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\makeatletter
-\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
-\makeatother
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{profile}
-\name{Sujay}{Garlanka}
-\position{Software Engineer}
-% \address{address}
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
 
-\email{sujay.garlanka@gmail.com}
-\homepage{sujaygarlanka.com}
-\github{sujaygarlanka}
-\linkedin{sujay-garlanka}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
 
-%-------------------------------------------------------------------------------
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
 
-% Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-% \makecvfooter
-%   {\today}
-%   {Sujay Garlanka~~~·~~~Resumé}
-%   {\thepage}
+\begin{center}
+    \textbf{\Huge \scshape Sujay Garlanka} \\ \vspace{1pt}
+    \href{mailto:x@x.com}
+    {\underline{sujay.garlanka@gmail.com}} $|$ 
+    \href{https://www.sujaygarlanka.com}
+    {\underline{sujaygarlanka.com}} $|$
+    \href{https://www.linkedin.com/in/sujay-garlanka/}
+    {\underline{linkedin.com/in/sujay-garlanka}} $|$
+    \href{https://github.com/sujaygarlanka}
+    {\underline{github.com/sujaygarlanka}}
+\end{center}
 
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/education.tex}
-\input{resume/skills.tex}
-\input{resume/experience.tex}
-% \newpage
-% \input{resume/projects.tex}
+%-----------Summary-----------
+\section{Summary}
+    \small A graduate student in computer science who has previously worked with enterprise scale data processing, developing APIs and building heavily used open source libraries for developers to interact with those APIs. Also, has experience with full stack development. In addition, enjoys experimenting with new technologies and has a deep appreciation of all components of a technology stack including hardware. Some personal projects showcasing this can be found \href{https://sujaygarlanka.com/projects.html}{\underline{here}}.
 
-%-------------------------------------------------------------------------------
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Duke University}{Durham, NC}
+      {Bachelor of Science in Electrical and Computer Engineering, Minor in Business}{Aug. 2015 -- May. 2019}
+    \resumeSubheading
+      {University of Southern California}{Los Angeles, CA}
+      {Masters of Science in Computer Science}{Aug. 2022 -- May. 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Box}{August 2019 - June 2022}
+      {Software Engineer}{Redwood City, CA}
+      \resumeItemListStart
+        \resumeItem{Co-leading the migration and re-architecture of Box API data collection and report generation of 3.8 to 114 billion rows of data daily from cron jobs to Apache Spark jobs. This decreases compute time per cluster and increases system fault tolerance.}
+        \resumeItem{Developed and maintained the open source Box SDKs in Github to allow developers to integrate with Box's API. Over 1.3 million API calls are made every minute through these SDKs.}
+        \resumeItem{Worked with the Java, .NET, Python, Node.js, iOS content, iOS preview SDKs and a CLI.}
+        \resumeItem{Worked on networking in the iOS content SDK by rewriting the network layer to reduce the SDK size by 70\%, reducing writes to disk and adding support for video streaming.}
+        \resumeItem{Helped lead the intern interview hiring process, implemented tooling to streamline the process and made the take home project more inclusive and convenient for students.}
+      \resumeItemListEnd
+      \emph{Technologies:} Java, .NET, Python, Node.js, Swift
+
+      \href{https://sujaygarlanka.com/experience.html}{\emph{More Details} \ldots}
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Box}{May 2018 - July 2018}
+      {Software Engineer Intern}{Redwood City, CA}
+      \resumeItemListStart
+        \resumeItem{Built an open source command line tool for developers that accesses 200 of Box’s API endpoints}
+        \resumeItem{Incorporated JSON Web Token (JWT) authentication in the CLI that allows users to securely authenticate with Box to make API calls}
+        \resumeItem{Included features such as interactive CLI with prompting and bulk input/bulk output}
+        \resumeItem{Tool was publicly released and handles around 10k requests per minute}
+     \resumeItemListEnd
+     \emph{Technologies:} Node.js, Oclif CLI Framework, Mocha Testing Framework
+
+    \href{https://sujaygarlanka.com/experience.html#internship}{\emph{More Details} \ldots}
+
+    \resumeSubheading
+      {Cisco}{May 2017 - July 2017}
+      {Software Engineer Intern}{Morrisville, NC}
+      \resumeItemListStart
+        \resumeItem{Created a proof of concept (POC) for an internal tool to digitize the creation and management life cycle of company legal documents}
+        \resumeItem{Designed and implemented the tool to select the correct form based on user responses, insert the form inputs into a PDF of the appropriate legal document, and track it through the approval and review process}
+        \resumeItem{Integrated it with the DocuSign API for e-signatures and approval}
+     \resumeItemListEnd
+     \emph{Technologies:} AngularJS, Node.js, MongoDB, Express.js
+
+    \resumeSubheading
+      {Duke University}{Aug. 2017 - Dec. 2017}
+      {ECE Teaching Assistant}{Durham, NC}
+      \resumeItemListStart
+        \resumeItem{Teaching assistant for microelectronics devices and circuits class for Dr. Aaron Franklin}
+        \resumeItem{Held office hours, review sessions and graded homework}
+        \resumeItem{Awarded TA of the semester}
+     \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Node.js, Java, .NET, Swift, SQL} \\
+     \textbf{Frameworks/Tools}{: Apache Spark, Oclif CLI Framework, Travis CI, Jenkins} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
 \end{document}
