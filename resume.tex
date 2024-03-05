@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -126,7 +126,7 @@
 
 %-----------Summary-----------
 \section{Summary}
-    \small A graduate student in computer science who has previously worked with enterprise scale data processing, developing APIs and building heavily used open source libraries for developers to interact with those APIs. Also, has experience with full stack development. In addition, enjoys experimenting with new technologies and has a deep appreciation of all components of a technology stack including hardware. Some personal projects showcasing this can be found \href{https://sujaygarlanka.com/projects.html}{\underline{here}}.
+    \small A graduate student in computer science (robotics) who is working on robotics research in simulation by developing action primitives via algorithmic approaches and reinforcement learning approaches via distributed learning. Previously worked with enterprise scale data processing, developing APIs and building heavily used open source libraries for developers to interact with those APIs. Also, has experience with full stack development. 
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -138,11 +138,25 @@
       {University of Southern California}{Los Angeles, CA}
       {Masters of Science in Computer Science}{Aug. 2022 -- May. 2024}
   \resumeSubHeadingListEnd
+  \emph{Relevant Coursework: Intro to Robotics, Robotics and Dynamics, Autonomous Cyber-Physical Systems, Machine Learning, Embedded Systems}
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
+    \resumeSubheading
+      {Stanford Vision Lab}{June 2023 - }
+      {Research Engineer}{Palo Alto/Los Angeles, CA}
+      \resumeItemListStart
+        \resumeItem{Developing functionality for the open-source robotics simulator, \href{https://behavior.stanford.edu/omnigibson/}{\underline{OmniGibson}}, built on Nvidia's IsaacSim simulation platform}
+        \resumeItem{Developed algorithmic action primitives that use privileged information in the simulator for navigation and manipulation (grasping, placing inside/on top, opening and closing for prismatic and revolute joints) }
+        \resumeItem{Developing action primitives using reinforcement learning. I helped create a distributed learning setup using GRPC. The setup includes a vector client environment running on a node for the RL learner that connects over the network to an N number of OmniGibson environments on other nodes.}
+        \resumeItem{Currently using the distributed setup to deploy RL experiments on a Slurm cluster with Stables Baselines 3 to train a policy and Weights and Biases to track policy and computational performance}
+     \resumeItemListEnd
+     \emph{Technologies:} Python, GRPC, Slurm, Stable Baselines 3, Weights and Biases 
+     
+    \href{https://github.com/StanfordVL/OmniGibson/pull/282}{\underline{Github Pull Request} \ldots}
+  
     \resumeSubheading
       {Box}{August 2019 - June 2022}
       {Software Engineer}{Redwood City, CA}
@@ -155,7 +169,7 @@
       \resumeItemListEnd
       \emph{Technologies:} Java, .NET, Python, Node.js, Swift
 
-      \href{https://sujaygarlanka.com/experience.html}{\emph{More Details} \ldots}
+      \href{https://sujaygarlanka.com/experience.html}{\underline{More Details} \ldots}
       
 % -----------Multiple Positions Heading-----------
 %    \resumeSubSubheading
@@ -178,35 +192,16 @@
      \resumeItemListEnd
      \emph{Technologies:} Node.js, Oclif CLI Framework, Mocha Testing Framework
 
-    \href{https://sujaygarlanka.com/experience.html#internship}{\emph{More Details} \ldots}
-
-    \resumeSubheading
-      {Cisco}{May 2017 - July 2017}
-      {Software Engineer Intern}{Morrisville, NC}
-      \resumeItemListStart
-        \resumeItem{Created a proof of concept (POC) for an internal tool to digitize the creation and management life cycle of company legal documents}
-        \resumeItem{Designed and implemented the tool to select the correct form based on user responses, insert the form inputs into a PDF of the appropriate legal document, and track it through the approval and review process}
-        \resumeItem{Integrated it with the DocuSign API for e-signatures and approval}
-     \resumeItemListEnd
-     \emph{Technologies:} AngularJS, Node.js, MongoDB, Express.js
-
-    \resumeSubheading
-      {Duke University}{Aug. 2017 - Dec. 2017}
-      {ECE Teaching Assistant}{Durham, NC}
-      \resumeItemListStart
-        \resumeItem{Teaching assistant for microelectronics devices and circuits class for Dr. Aaron Franklin}
-        \resumeItem{Held office hours, review sessions and graded homework}
-        \resumeItem{Awarded TA of the semester}
-     \resumeItemListEnd
-  \resumeSubHeadingListEnd
+    \href{https://sujaygarlanka.com/experience.html#internship}{\underline{More Details} \ldots}
+\resumeSubHeadingListEnd
 
 %
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Node.js, Java, .NET, Swift, SQL} \\
-     \textbf{Frameworks/Tools}{: Apache Spark, Oclif CLI Framework, Travis CI, Jenkins} \\
+     \textbf{Languages}{: Python, Node.js, Java, .NET, Swift, SQL, Matlab, bash} \\
+     \textbf{Frameworks/Tools}{: GRPC, Apache Spark, Oclif CLI Framework, Travis CI, Jenkins} \\
     }}
  \end{itemize}
 
