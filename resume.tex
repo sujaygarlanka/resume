@@ -1,215 +1,266 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PlushCV - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (11/28/2021)
+%
+% Author:
+% Shubham Mazumder (http://mazumder.me)
+%
+% Hacked together from:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add more icon options 
+% 4. Fix hacky left alignment on contact line
+% 5. Remove Hacky fix for awkward extra vertical space
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons:
+%%Main: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper,10pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\documentclass[]{plushcv}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+\fancyhf{}
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
-\begin{center}
-    \textbf{\Huge \scshape Sujay Garlanka} \\ \vspace{1pt}
-    \href{mailto:sujay.garlanka@gmail.com}
-    {\small \underline{sujay.garlanka@gmail.com}} $|$ 
-    \href{https://www.sujaygarlanka.com}
-    {\small \underline{sujaygarlanka.com}} $|$
-    \href{https://www.linkedin.com/in/sujay-garlanka/}
-    {\small \underline{linkedin.com/in/sujay-garlanka}} $|$
-    \href{https://github.com/sujaygarlanka}
-    {\small \underline{github.com/sujaygarlanka}}
-\end{center}
-
-%-----------Summary-----------
-\small A Software Engineer who has experience in robotics research through the development of action primitives using algorithmic and distributed reinforcement learning approaches in simulation. Also, has 3 years of experience working with enterprise scale data processing, developing APIs and building heavily used open source libraries for developers to interact with those APIs. Has full stack development experience as well. \textit{A U.S. citizen and authorized to work for any U.S. employer.}
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Southern California}{Los Angeles, CA}
-      {Masters of Science in Computer Science}{Aug. 2022 -- Aug. 2024}
-    \resumeSubheading
-      {Duke University}{Durham, NC}
-      {Bachelor of Science in Electrical and Computer Engineering}{Aug. 2015 -- May. 2019}
-  \resumeSubHeadingListEnd
-  \vspace{3pt}
-  Relevant Coursework: \emph{Intro to Robotics, Robotics and Dynamics, Autonomous Cyber-Physical Systems, Machine Learning, Embedded Systems}
-
-
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Stanford Vision Lab}{May 2023 - August 2024}
-      {Student Researcher}{Palo Alto/Los Angeles, CA}
-      \resumeItemListStart
-        \resumeItem{Developed functionality for the open-source robotics simulator, \href{https://behavior.stanford.edu/omnigibson/}{\underline{OmniGibson}}, built on Nvidia's IsaacSim simulation platform}
-        \resumeItem{Developed algorithmic action primitives that use privileged information in the simulator for navigation and manipulation (grasping, placing inside/on top, opening and closing for prismatic and revolute joints) }
-        \resumeItem{Developed action primitives using reinforcement learning. I helped create a distributed learning setup using gRPC. The setup includes a vector client environment running on a node for the RL learner that connects over the network to an N number of OmniGibson environments on other nodes.}
-        \resumeItem{Used a distributed setup to deploy RL experiments on a Slurm cluster with Stables Baselines 3 to train a policy and Weights and Biases to track policy and computational performance}
-        \resumeItem{Paper including my work: \href{https://arxiv.org/pdf/2403.09227}{\underline{https://arxiv.org/pdf/2403.09227}}}
-     \resumeItemListEnd 
-     \vspace{5pt}
-     \emph{References:} \href{https://www.cemgokmen.com/}{\underline{Cem Gokmen}}, Ph.D @ SVL, \href{mailto:cgokmen@stanford.edu}{cgokmen@stanford.edu} (Primary) \vline \hspace{1pt} \href{https://cs.stanford.edu/people/zharu/}{\underline{Rouhan Zhang}}, Postdoctoral Researcher @ SVL, \href{mailto:zharu@stanford.edu}{zharu@stanford.edu}  (Secondary)
-     
-     \emph{Technologies:} Python, IsaacSim, gRPC, Slurm, Stable Baselines 3, Weights and Biases
-     
-    \href{https://sujaygarlanka.com/experience/svl/}{\underline{More Details} \ldots}
-  
-    \resumeSubheading
-      {Box}{August 2019 - June 2022}
-      {Software Engineer}{Redwood City, CA}
-      \resumeItemListStart
-        \resumeItem{Co-lead the migration and re-architecture of Box API data collection and report generation of 3.8 to 114 billion rows of data daily from cron jobs to Apache Spark jobs. This decreases compute time per cluster and increases system fault tolerance.}
-        \resumeItem{Developed and maintained the open source Box SDKs in Github to allow developers to integrate with Box's API. Over 1.3 million API calls are made every minute through these SDKs.}
-        \resumeItem{Worked with the Java, .NET, Python, Node.js, iOS content, iOS preview SDKs and a CLI.}
-        \resumeItem{Worked on networking in the iOS content SDK by rewriting the network layer to reduce the SDK size by 70\%, reducing writes to disk and adding support for video streaming.}
-        \resumeItem{Helped lead the intern interview hiring process, implemented tooling to streamline the process and made the take home project more inclusive and convenient for students.}
-      \resumeItemListEnd
-      \vspace{5pt}
-      \emph{Technologies:} Apache Spark, Scala, Java, .NET, Python, Node.js, Swift, SQL
-
-      \href{https://sujaygarlanka.com/experience/box/}{\underline{More Details} \ldots}
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Box}{May 2018 - July 2018}
-      {Software Engineer Intern}{Redwood City, CA}
-      \resumeItemListStart
-        \resumeItem{Built an open source command line tool for developers that accesses 200 of Box’s API endpoints}
-        \resumeItem{Incorporated JSON Web Token (JWT) authentication in the CLI that allows users to securely authenticate with Box to make API calls}
-        \resumeItem{Included features such as interactive CLI with prompting and bulk input/bulk output}
-        \resumeItem{Tool was publicly released and handles around 10k requests per minute}
-     \resumeItemListEnd
-     \vspace{5pt}
-     \emph{Technologies:} Node.js, oclif CLI Framework, Mocha Testing Framework
-
-    \href{https://sujaygarlanka.com/experience/box-internship/}{\underline{More Details} \ldots}
-\resumeSubHeadingListEnd
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, C++, Node.js, Java, .NET, Swift, SQL, MATLAB, bash} \\
-     \textbf{Frameworks/Tools}{: ROS2, IsaacSim, Slurm, Stable Baselines 3, Weights and Biases, gRPC, Apache Spark, oclif CLI Framework, Mocha Testing Framework, Travis CI, Jenkins} \\
-    }}
- \end{itemize}
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%-------------------------------------------
-\end{document}
+\namesection{Sujay}{Garlanka}{Software Engineer}{\contactline{\href{https://sujaygarlanka.com/}{sujaygarlanka.com}}{\href{https://github.com/sujaygarlanka}{sujaygarlanka}}{\href{https://www.linkedin.com/in/sujay-garlanka/}{in/sujaygarlanka}}
+{\href{mailto:sujay.garlanka@gmail.com}{sujay.garlanka@gmail.com}}}
+\vspace{-1.0em}
+
+% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\href{https://www.github.com/sansquoi}{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.74\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+A Software Engineer who has experience in robotics research through the development of action primitives using algorithmic and
+distributed reinforcement learning approaches in simulation. Also, has 3 years of experience working with enterprise scale data
+processing, developing APIs and building heavily used open source libraries for developers to interact with those APIs. Has full stack
+development experience as well. \textbf{A U.S. citizen and authorized to work for any U.S. employer.}
+
+\section{Experience}
+\runsubsection{Stanford Vision Lab}
+\descript{Graduate Student Researcher}
+\location{May 2023 - August 2024 | Palo Alto/Los Angeles, CA}
+\location{\underline{\href{https://momagen-rss.github.io/}{Detailed Write Up ...}}}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\sectionsep
+\item Developed functionality for the open-source robotics simulator, \href{https://behavior.stanford.edu/omnigibson/}{\underline{OmniGibson}}, built on Nvidia's IsaacSim simulation platform
+\item Developed algorithmic action primitives that use privileged information in the simulator for navigation and manipulation (grasping, placing inside/on top, opening and closing for prismatic and revolute joints)
+\item Developed action primitives using reinforcement learning. I helped create a distributed learning setup using gRPC and Docker. The setup includes a vector client environment running on a node for the RL learner that connects over the network to an $N$ number of OmniGibson containerized environments on other nodes.
+\item Used a distributed setup to deploy RL experiments on a Slurm cluster with Stables Baselines 3 to train a policy and Weights and Biases to track policy and computational performance
+\item Work used in publications BEHAVIOR-1K [1] and MoMaGen [2]
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Box}
+\descript{Software Engineer}
+\location{August 2019 - June 2022 | Redwood City, CA}
+\begin{tightemize}
+\sectionsep
+\item Co-lead the migration and re-architecture of Box API data collection and report generation of 3.8 to 114 billion rows of data daily from cron jobs to Apache Spark jobs. This decreases compute time per cluster and increases system fault tolerance.
+\item Developed and maintained the open source Box SDKs in Github to allow developers to integrate with Box's API. Over 1.3 million API calls are made every minute through these SDKs.
+\item Worked with the Java, .NET, Python, Node.js, iOS content, iOS preview SDKs and a CLI.
+\item Worked on networking in the iOS content SDK by rewriting the network layer to reduce the SDK size by 70\%, reducing writes to disk and adding support for video streaming.
+\item Helped lead the intern interview hiring process, implemented tooling to streamline the process and made the take home project more inclusive and convenient for students.
+\end{tightemize}
+
+\section{Publications}
+\runsubsection{[1] Behavior-1K: A human-centered, embodied ai benchmark with 1,000 everyday activities and realistic simulation}
+\\
+\descript{Chengshu Li, Ruohan Zhang, Josiah Wong, ... \textbf{Sujay Garlanka}, Li Fei-Fei, et al. }
+\location{Best Paper Nominee in 6th Annual Conference on Robot Learning, 2022 - \underline{\href{https://arxiv.org/abs/2403.09227}{Paper}}, \underline{\href{https://behavior.stanford.edu/index.html}{Website}}}
+\sectionsep
+\runsubsection{[2] MoMaGen: Generating Demonstrations under Soft and Hard Constraints for Multi-Step Bimanual Mobile Manipulation}
+\\
+\descript{Chengshu Li, Mengdi Xu, Arpit Bahety, ... \textbf{Sujay Garlanka}, Li Fei-Fei, et al.}
+\location{RSS 2025 – Mobile Manipulation Workshop (MoMA) - \underline{\href{https://openreview.net/pdf?id=qQZUkpAYKX}{Paper}}, \underline{\href{https://momagen-rss.github.io/}{Website}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Projects}
+
+% \runsubsection{Chess Engine}
+% \descript{| C++}
+% \location{2018}
+% \begin{tightemize}
+% \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper venenatis nisi at suscipit. Vestibulum vel odio in diam ultrices posuere. Cras suscipit faucibus ullamcorper.
+% \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper venenatis nisi at suscipit.
+% \end{tightemize}
+% \sectionsep
+
+% \runsubsection{Speech-enabled Chatbot}
+% \descript{| C\#, Microsoft Bot Framework}
+% \location{2018}
+% \begin{tightemize}
+% \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper venenatis nisi at suscipit. Vestibulum vel odio in diam ultrices posuere. Cras suscipit faucibus ullamcorper. 
+% \item Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper venenatis nisi at suscipit.
+% \end{tightemize}
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2020	     & Finalist & Lorem Ipsum\\
+% 2018	     & $2^{nd}$ & Dolor Sit Amet\\
+% 2015	     & Finalist  & Cras posuere\\
+% \\
+% \end{tabular}
+% \sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\sectionsep
+Python \textbullet{} Javascript \textbullet{} C++ \textbullet{} Java \textbullet{} Swift \textbullet{} SQL \textbullet{} MATLAB \textbullet{} Bash
+
+\sectionsep
+\sectionsep
+
+\subsection{Libraries/Frameworks}
+\sectionsep
+ROS2 \textbullet{} PyTorch \textbullet{} NumPy \textbullet{} Stable Baselines 3 \textbullet{} gRPC \textbullet{} Apache Spark \textbullet{} oclif CLI Framework \textbullet{} Mocha Testing Framework 
+
+\sectionsep
+\sectionsep
+
+\subsection{Tools/Platforms}
+\sectionsep
+Git \textbullet{} Travis CI \textbullet{} Jenkins \textbullet{}  IsaacSim \textbullet{} Slurm \textbullet{} Weights and Biases \textbullet{} Docker 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{University of Southern California}
+\descript{Masters of Science in Computer Science}
+\location{Aug. 2022 - Aug. 2024 | Los Angeles, CA}
+
+\sectionsep
+\sectionsep
+
+\subsection{Duke University}
+\descript{Bachelor of Science in Electrical and Computer Engineering}
+\location{Aug. 2015 - May 2019 | Durham, NC}
+
+\sectionsep
+\sectionsep
+
+\subsection{Selected Coursework}
+Robotics and Dynamics \textbullet{} Autonomous Cyber-Physical Systems \textbullet{} Machine Learning \textbullet{} Artificial Intelligence \textbullet{} Analysis of Algorithms \textbullet{} Operating Systems \textbullet{} Advanced Computer Architecture \textbullet{} Embedded Systems \textbullet{} Ordinary and Partial Differential Equations
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     REFERENCES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References} 
+\href{https://www.linkedin.com/in/cgokmen/}{\textbf{Cem Gokmen}, Ph.D, Stanford}
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} \href{mailto:cgokmen@stanford.edu}{cgokmen@stanford.edu}
+}
+\parbox{\wd0}{\box0}
+\endgroup
+
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/home.png}\hspace{0.3cm}\href{https://www.cemgokmen.com/}{cemgokmen.com}
+}
+\parbox{\wd0}{\box0}
+\endgroup
+
+\sectionsep
+
+\href{https://www.linkedin.com/in/carycheng/}{\textbf{Cary Cheng}, Software Architect, Stripe}
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1cm 0cm 0cm}]{icons/main/mail.png}\hspace{0.3cm} \href{mailto:ccheng@stripe.com}{ccheng@stripe.com}
+}
+\parbox{\wd0}{\box0}
+\endgroup
+
+\begingroup
+\setbox0=\hbox{
+\includegraphics[scale=0.1,trim={0 1.25cm -0.4cm 0cm}]{icons/main/linkedin.png}\hspace{0.3cm}\href{https://www.linkedin.com/in/carycheng/}{in/carycheng}
+}
+\parbox{\wd0}{\box0}
+\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \subsection{Graduate}
+% Graduate Algorithms \textbullet{}\\ 
+% Advanced Computer Architecture \textbullet{}\\ 
+% Operating Systems \textbullet{}\\ 
+% Artificial Intelligence \textbullet{}\\
+% Visualization For Scientific Data \\
+% \sectionsep
+
+% \subsection{Undergraduate}
+
+% Database Management Systems \textbullet{}\\
+% Object Oriented Analysis and Design \textbullet{}\\
+% Artificial Intelligence and Expert Systems \textbullet{}\\
+% Scripting Languages and Web Tech \textbullet{}\\
+% Software Engineering \\
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+
