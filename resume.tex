@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -18,7 +18,6 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -55,7 +54,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -74,7 +73,7 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -153,13 +152,12 @@
         \resumeItem{Developed action primitives using reinforcement learning. I helped create a distributed learning setup using gRPC. The setup includes a vector client environment running on a node for the RL learner that connects over the network to an N number of OmniGibson environments on other nodes.}
         \resumeItem{Used a distributed setup to deploy RL experiments on a Slurm cluster with Stables Baselines 3 to train a policy and Weights and Biases to track policy and computational performance}
         \resumeItem{Paper including my work: \href{https://arxiv.org/pdf/2403.09227}{\underline{https://arxiv.org/pdf/2403.09227}}}
+        \resumeItem{References: \href{https://www.cemgokmen.com/}{\underline{Cem Gokmen}}, Ph.D @ SVL, \href{mailto:cgokmen@stanford.edu}{cgokmen@stanford.edu}}
      \resumeItemListEnd 
      \vspace{5pt}
-     \emph{References:} \href{https://www.cemgokmen.com/}{\underline{Cem Gokmen}}, Ph.D @ SVL, \href{mailto:cgokmen@stanford.edu}{cgokmen@stanford.edu} (Primary) \vline \hspace{1pt} \href{https://cs.stanford.edu/people/zharu/}{\underline{Rouhan Zhang}}, Postdoctoral Researcher @ SVL, \href{mailto:zharu@stanford.edu}{zharu@stanford.edu}  (Secondary)
+     % \emph{References:} \href{https://www.cemgokmen.com/}{\underline{Cem Gokmen}}, Ph.D @ SVL, \href{mailto:cgokmen@stanford.edu}{cgokmen@stanford.edu}
      
-     \emph{Technologies:} Python, IsaacSim, gRPC, Slurm, Stable Baselines 3, Weights and Biases
-     
-    \href{https://sujaygarlanka.com/experience/svl/}{\underline{More Details} \ldots}
+     \href{https://sujaygarlanka.com/experience/svl/}{\underline{More Details} \ldots}
   
     \resumeSubheading
       {Box}{August 2019 - June 2022}
@@ -172,7 +170,6 @@
         \resumeItem{Helped lead the intern interview hiring process, implemented tooling to streamline the process and made the take home project more inclusive and convenient for students.}
       \resumeItemListEnd
       \vspace{5pt}
-      \emph{Technologies:} Apache Spark, Scala, Java, .NET, Python, Node.js, Swift, SQL
 
       \href{https://sujaygarlanka.com/experience/box/}{\underline{More Details} \ldots}
       
@@ -196,7 +193,6 @@
         \resumeItem{Tool was publicly released and handles around 10k requests per minute}
      \resumeItemListEnd
      \vspace{5pt}
-     \emph{Technologies:} Node.js, oclif CLI Framework, Mocha Testing Framework
 
     \href{https://sujaygarlanka.com/experience/box-internship/}{\underline{More Details} \ldots}
 \resumeSubHeadingListEnd
