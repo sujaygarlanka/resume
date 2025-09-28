@@ -24,7 +24,7 @@
 % Color definitions
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{date}{HTML}{666666}
-\definecolor{title}{HTML}{2563EB}
+\definecolor{title}{HTML}{4169E1}
 \definecolor{primary}{HTML}{2b2b2b}
 \definecolor{headings}{HTML}{6A6A6A}
 \definecolor{subheadings}{HTML}{333333}
