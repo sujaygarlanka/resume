@@ -205,6 +205,13 @@ Last Updated on \today
 % Descriptors command
 \newcommand{\descript}[1]{
 \color{subheadings}\raggedright\scshape\fontspec[Path = \pathdescriptorfont]{\descriptorfont}\fontsize{\descriptorsize}{13pt}\selectfont {#1 \\} \normalfont}
+% \newcommand{\descript}[1]{%
+%   \color{subheadings}\raggedright
+%   \fontspec[Path=\pathdescriptorfont, BoldFont={*Bold}]{\descriptorfont}
+%   \fontsize{\descriptorsize}{13pt}\selectfont
+%   #1 \par
+%   \normalfont
+% }
 
 % Location command
 \newcommand{\location}[1]{
