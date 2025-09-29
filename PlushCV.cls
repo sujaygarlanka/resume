@@ -203,15 +203,24 @@ Last Updated on \today
 \color{subheadings}\fontspec[Path = \pathsubheadingfont ]{\subheadingfont}\fontsize{\subheadingsize}{14pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 % Descriptors command
+\def \descriptorfontbold {sourcesanspro-SemiBold}
+
+\newfontfamily\DescriptorFamily[
+  Path=\pathdescriptorfont,
+  UprightFont   = \descriptorfont,
+  BoldFont      = \descriptorfontbold,
+]{\descriptorfont}
+
 \newcommand{\descript}[1]{
-\color{subheadings}\raggedright\scshape\fontspec[Path = \pathdescriptorfont]{\descriptorfont}\fontsize{\descriptorsize}{13pt}\selectfont {#1 \\} \normalfont}
-% \newcommand{\descript}[1]{%
-%   \color{subheadings}\raggedright
-%   \fontspec[Path=\pathdescriptorfont, BoldFont={*Bold}]{\descriptorfont}
-%   \fontsize{\descriptorsize}{13pt}\selectfont
-%   #1 \par
-%   \normalfont
-% }
+  {\color{subheadings}\raggedright\scshape
+   \DescriptorFamily
+   \fontsize{\descriptorsize}{13pt}\selectfont
+   #1\\
+  }
+}
+
+% \newcommand{\descript}[1]{
+% \color{subheadings}\raggedright\scshape\fontspec[Path = \pathdescriptorfont]{\descriptorfont}\fontsize{\descriptorsize}{13pt}\selectfont {#1 \\} \normalfont}
 
 % Location command
 \newcommand{\location}[1]{
